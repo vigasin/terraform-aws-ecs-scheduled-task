@@ -1,11 +1,16 @@
-variable "name" {
+variable "product_name" {
   type        = "string"
   description = "Unique name for resources"
 }
 
-variable "environment" {
+variable "instance_name" {
   type        = "string"
-  description = "Environment - appended to ${var.name} for resources"
+  description = "Environment"
+}
+
+variable "task_name" {
+  type = "string"
+  default = "scheduled-task"
 }
 
 variable "network_mode" {
