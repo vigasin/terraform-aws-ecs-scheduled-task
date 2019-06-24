@@ -58,7 +58,7 @@ resource "aws_ecs_task_definition" "scheduled_task" {
   container_definitions    = var.container_definitions
   requires_compatibilities = ["EC2"]
   network_mode             = var.network_mode
-  execution_role_arn       = aws_iam_role.scheduled_task_ecs_execution.arn
+//  execution_role_arn       = aws_iam_role.scheduled_task_ecs_execution.arn
   task_role_arn            = aws_iam_role.scheduled_task_ecs.arn
   cpu                      = var.cpu
   memory                   = var.memory
